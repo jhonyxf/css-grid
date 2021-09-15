@@ -8,13 +8,19 @@
     <style>
         .grid{
             display: grid;
-            grid-template-columns: repeat(3, 3fr);
-            grid-template-rows: repeat(3, 1fr);
+            /* grid-template-columns: repeat(3, 3fr);
+            grid-template-rows: repeat(3, 1fr); */
             border: 2px dotted royalblue;
+            grid-auto-columns: auto;
+            grid-auto-rows: 35px;
+            grid-auto-flow: dense;
             
         }
         .grid-item{
             background-color:red;
+        }
+        .grid-item-manual{
+            grid-column: 3;
         }
     </style>
 </head>
@@ -23,6 +29,7 @@
         <div class="grid-item">1</div>
         <div class="grid-item">2</div>
         <div class="grid-item">3</div>
+        <div class="grid-item-manual">4</div>
     </section>
 </body>
 </html>
